@@ -25,7 +25,8 @@ public class Task {
 
     }
 
-    public Task(String text, String date, String status, String priority, String tag) {
+    public Task(String id, String text, String date, String status, String priority, String tag) {
+        this.id = id;
         this.text = text;
         this.date = date;
         this.status = status;
