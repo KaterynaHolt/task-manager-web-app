@@ -73,7 +73,9 @@
                         <goals>
                             <goal>npm</goal>
                         </goals>
-
+                        <configuration>
+                            <arguments>install</arguments>
+                        </configuration>
                     </execution>
                     <execution>
                         <id>npm run build</id>
