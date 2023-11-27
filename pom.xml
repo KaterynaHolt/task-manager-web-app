@@ -54,7 +54,7 @@
                 <artifactId>frontend-maven-plugin</artifactId>
                 <version>1.6</version>
                 <configuration>
-                    <workingDirectory>react-task-manager-web-app/react-task-manager-web-app</workingDirectory>
+                    <workingDirectory>react-task-manager-web-app</workingDirectory>
                     <installDirectory>target</installDirectory>
                 </configuration>
                 <executions>
@@ -96,7 +96,7 @@
                         <configuration>
                             <target>
                                 <copy todir="${project.build.directory}/classes/public">
-                                    <fileset dir="${project.basedir}/react-task-manager-web-app/react-task-manager-web-app/build"/>
+                                    <fileset dir="${project.basedir}/react-task-manager-web-app/build"/>
                                 </copy>
                             </target>
                         </configuration>
