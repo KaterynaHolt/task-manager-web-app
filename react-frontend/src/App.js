@@ -1,8 +1,7 @@
 import React, {Component, useState, useEffect} from 'react';
-import logo from './logo.svg';
-import './App.css';
-import TaskService from "./services/TaskService";
 import SimpleComponent from "./components/SimpleComponent";
+
+import './App.css';
 
 
 function App() {
