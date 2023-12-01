@@ -13,7 +13,11 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '17'
+        node-version: 'v18.18.0'
+        npm-version: '9.8.1'
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn clean install
+      env:
+         CI: false
