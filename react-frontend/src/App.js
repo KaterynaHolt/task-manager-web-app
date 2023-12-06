@@ -1,13 +1,18 @@
 import React, {Component, useState, useEffect} from 'react';
-import SimpleComponent from "./components/SimpleComponent";
+import AllTasksComponent from "./components/AllTasksComponent";
 
 import './App.css';
+import HeaderComponent from "./components/HeaderComponent";
 
 
 function App() {
     return (
-        <div className="container">
-            <SimpleComponent/>
+        <div style={{
+            backgroundColor: "#C7D7FD",
+            height: 630,
+        }}>
+            <HeaderComponent />
+            <AllTasksComponent/>
         </div>
     )
 }

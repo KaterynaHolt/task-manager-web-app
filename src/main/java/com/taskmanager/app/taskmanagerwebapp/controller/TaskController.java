@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -20,9 +21,21 @@ public class TaskController {
 
     //get all employees
     @GetMapping("/tasks")
-    public List<Task> getAllTasks(){
-        return taskRepository.findAll();
+    public List<List<Task>> getAllTasks(){
+        List<List<Task>> result = new ArrayList<>();
+        result.add(taskRepository.getIncompletedTasks());
+        result.add(taskRepository.getCompletedTasks());
+        //return taskRepository.getIncompletedTasks();
+        return result;
     }
+
+    /*@GetMapping("/tasks")
+    public List<Task> getCompletedTasks(){
+        //List<List<Task>> result = new ArrayList<>();
+        //result.add(taskRepository.getIncompletedTasks());
+        //result.add(taskRepository.getCompletedTasks());
+        return taskRepository.getCompletedTasks();
+    }*/
 
     @GetMapping("/hello")
     public String hello() {
