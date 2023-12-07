@@ -1,0 +1,57 @@
+.h3-name{
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.h6-name{
+    margin-left: 15px;
+    color: #e74c3c;
+    display: inline-block;
+}
+
+.table-header-title{
+    font-size: 17px;
+    width: 275px;
+    text-align: center;
+}
+
+.table-header-middle{
+    font-size: 17px;
+    width: 150px;
+    text-align: center;
+}
+
+.table-header-icon{
+    font-size: 17px;
+    width: 175px;
+    text-align: center;
+}
+
+.table-info-title{
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+.table-info-title-icon{
+    margin-right: 10px;
+    color: blue;
+}
+
+.table-info-middle{
+    vertical-align: middle;
+    font-size: 15px;
+    text-align: center;
+}
+
+#button-table{
+    margin-left: 10px;
+}
+
+#completed{
+    margin-top: 50px;
+}
+
+
+
+
+

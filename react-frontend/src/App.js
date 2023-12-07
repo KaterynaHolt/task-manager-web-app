@@ -1,16 +1,14 @@
 import React, {Component, useState, useEffect} from 'react';
 import AllTasksComponent from "./components/AllTasksComponent";
-
-import './App.css';
 import HeaderComponent from "./components/HeaderComponent";
 
+import './App.css';
+import './AllTasksPage.css';
+import './Header.css';
 
 function App() {
     return (
-        <div style={{
-            backgroundColor: "#C7D7FD",
-            height: 630,
-        }}>
+        <div className="background">
             <HeaderComponent />
             <AllTasksComponent/>
         </div>

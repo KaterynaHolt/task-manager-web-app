@@ -1,6 +1,6 @@
 package com.taskmanager.app.taskmanagerwebapp.controller;
-
-import com.taskmanager.app.taskmanagerwebapp.repository.TaskRepository;
+import com.taskmanager.app.taskmanagerwebapp.model.Task;
+import com.taskmanager.app.taskmanagerwebapp.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,21 +8,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
 
-
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/taskmanager/")
 public class TaskController {
     @Autowired
-    private TaskRepository taskRepository;
+    private TaskService taskService;
 
     //get all employees
     @GetMapping("/tasks")
-    public List<Object> getAllTasks(){
-        List<Object> result = new ArrayList<>();
-        result.add(taskRepository.getIncompletedTasks());
-        result.add(taskRepository.getCompletedTasks());
-        return result;
+    public List<List<Task>> getAllTasks(){
+        return taskService.separateData();
     }
 
     @GetMapping("/hello")

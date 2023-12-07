@@ -28,7 +28,10 @@
   color: #61dafb;
 }
 
-
+.background{
+  background-color: #C7D7FD;
+  height: 100vh;
+}
 
 @keyframes App-logo-spin {
   from {

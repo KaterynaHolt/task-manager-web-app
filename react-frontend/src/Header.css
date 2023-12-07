@@ -1,0 +1,15 @@
+#header-navbar{
+    background-color: #A4BDFA;
+}
+
+.h1-title{
+    color: #EAEFF8;
+    margin-left: 20px;
+}
+
+#add-button{
+    float: right;
+    margin-right: 40px;
+    background-color: #C7D7FD;
+    color: black;
+}
