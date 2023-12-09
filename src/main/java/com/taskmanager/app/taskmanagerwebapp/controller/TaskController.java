@@ -18,7 +18,7 @@ public class TaskController {
     //get all employees
     @GetMapping("/tasks")
     public List<List<Task>> getAllTasks(){
-        return taskService.separateData();
+        return taskService.getAllTasks();
     }
 
     @GetMapping("/hello")

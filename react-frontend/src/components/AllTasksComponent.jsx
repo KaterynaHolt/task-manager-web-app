@@ -25,16 +25,16 @@ class AllTasksComponent extends Component {
                 <div class="container">
                     <br></br>
                     <br></br>
-                    <h3 className="h3-name">On Hold </h3>
-                    <h6 className="h6-name">(You have {this.state.incompleted.length} tasks) </h6>
+                    <h3 className="h3-table-name">On Hold </h3>
+                    <h6 className="h6-incompleted-info">(You have {this.state.incompleted.length} tasks) </h6>
                     <div className="row">
                         <table className="table table-striped table-bordered">
                             <thead>
                             <tr>
                                 <th className="table-header-title">Title</th>
-                                <th className="table-header-middle">Date</th>
-                                <th className="table-header-middle">Status</th>
-                                <th className="table-header-middle">Priority</th>
+                                <th className="table-header-date">Date</th>
+                                <th className="table-header-date">Status</th>
+                                <th className="table-header-date">Priority</th>
                                 <th className="table-header-icon">Tag</th>
                                 <th className="table-header-icon"></th>
                             </tr>
@@ -44,12 +44,12 @@ class AllTasksComponent extends Component {
                                 this.state.incompleted.map(
                                     task =>
                                         <tr key={task.id}>
-                                            <td className="table-info-title">
-                                                <FontAwesomeIcon icon={faCircle} className="table-info-title-icon"/> {task.text }</td>
-                                            <td className="table-info-middle">{task.date}</td>
-                                            <td className="table-info-middle">{task.status}</td>
-                                            <td className="table-info-middle">{task.priority}</td>
-                                            <td className="table-info-middle">{task.tag}</td>
+                                            <td className="table-body-title">
+                                                <FontAwesomeIcon icon={faCircle} className="table-body-title-icon"/> {task.text }</td>
+                                            <td className="table-body-date">{task.date}</td>
+                                            <td className="table-body-date">{task.status}</td>
+                                            <td className="table-body-date">{task.priority}</td>
+                                            <td className="table-body-date">{task.tag}</td>
                                             <td className="text-center">
                                                 <button className="btn btn-primary"><FontAwesomeIcon icon={faPenToSquare} /></button>
                                                 <button className="btn btn-success" id="button-table"><FontAwesomeIcon icon={faSquareCheck} /></button>
@@ -62,14 +62,14 @@ class AllTasksComponent extends Component {
                         </table>
                         <br></br>
                         <br></br>
-                        <h3 className="h3-name" id="completed">Completed </h3>
+                        <h3 className="h3-table-name" id="completed">Completed </h3>
                         <table className="table table-striped table-bordered">
                             <thead>
                             <tr>
                                 <th className="table-header-title">Title</th>
-                                <th className="table-header-middle">Date</th>
-                                <th className="table-header-middle">Status</th>
-                                <th className="table-header-middle">Priority</th>
+                                <th className="table-header-date">Date</th>
+                                <th className="table-header-date">Status</th>
+                                <th className="table-header-date">Priority</th>
                                 <th className="table-header-icon">Tag</th>
                                 <th className="table-header-icon"></th>
                             </tr>
@@ -79,12 +79,12 @@ class AllTasksComponent extends Component {
                                 this.state.completed.map(
                                     task =>
                                         <tr key={task.id}>
-                                            <td className="table-info-title">
-                                                <FontAwesomeIcon icon={faCircle} className="table-info-title-icon"/> {task.text }</td>
-                                            <td className="table-info-middle">{task.date}</td>
-                                            <td className="table-info-middle">{task.status}</td>
-                                            <td className="table-info-middle">{task.priority}</td>
-                                            <td className="table-info-middle">{task.tag}</td>
+                                            <td className="table-body-title">
+                                                <FontAwesomeIcon icon={faCircle} className="table-body-title-icon"/> {task.text }</td>
+                                            <td className="table-body-date">{task.date}</td>
+                                            <td className="table-body-date">{task.status}</td>
+                                            <td className="table-body-date">{task.priority}</td>
+                                            <td className="table-body-date">{task.tag}</td>
                                             <td className="text-center">
                                                 <button className="btn btn-secondary" id="button-table"><FontAwesomeIcon icon={faCircleXmark} /></button>
                                                 <button className="btn btn-danger" id="button-table"><FontAwesomeIcon icon={faTrash} /></button>

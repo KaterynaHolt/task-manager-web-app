@@ -10,12 +10,12 @@ import java.util.List;
 @Service
 public class TaskService {
     @Autowired
-    TaskRepository taskRepository;
+    private TaskRepository taskRepository;
 
     /**
      * This method separates data into two tables
      */
-    public List<List<Task>> separateData(){
+    public List<List<Task>> getAllTasks(){
         List<List<Task>> result = new ArrayList<>();
         result.add(taskRepository.getIncompletedTasks());
         result.add(taskRepository.getCompletedTasks());

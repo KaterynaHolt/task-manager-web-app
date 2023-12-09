@@ -1,15 +1,17 @@
+@import "color.css";
+
 #header-navbar{
-    background-color: #A4BDFA;
+    background-color: var(--color-background-navbar);
 }
 
 .h1-title{
-    color: #EAEFF8;
+    color: var(--color-navbar-title);
     margin-left: 20px;
 }
 
 #add-button{
     float: right;
     margin-right: 40px;
-    background-color: #C7D7FD;
-    color: black;
+    background-color: var(--color-background-page);
+    color: var(--color-text);
 }
