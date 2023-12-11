@@ -15,7 +15,8 @@ class AllTasksComponent extends Component {
 
     componentDidMount() {
         TaskService.getTasks().then((res) => {
-            this.setState({incompleted: res.data[0], completed: res.data[1]})
+            let data = res.data;
+            this.setState({incompleted: data.incompleted, completed: data.completed})
         });
     }
 
@@ -25,8 +26,8 @@ class AllTasksComponent extends Component {
                 <div class="container">
                     <br></br>
                     <br></br>
-                    <h3 className="h3-table-name">On Hold </h3>
-                    <h6 className="h6-incompleted-info">(You have {this.state.incompleted.length} tasks) </h6>
+                    <h3 className="table-name">On Hold </h3>
+                    <h6 className="incompleted-info">(You have {this.state.incompleted.length} tasks) </h6>
                     <div className="row">
                         <table className="table table-striped table-bordered">
                             <thead>
@@ -52,8 +53,8 @@ class AllTasksComponent extends Component {
                                             <td className="table-body-date">{task.tag}</td>
                                             <td className="text-center">
                                                 <button className="btn btn-primary"><FontAwesomeIcon icon={faPenToSquare} /></button>
-                                                <button className="btn btn-success" id="button-table"><FontAwesomeIcon icon={faSquareCheck} /></button>
-                                                <button className="btn btn-danger" id="button-table"><FontAwesomeIcon icon={faTrash} /></button>
+                                                <button className="btn btn-success button-table"><FontAwesomeIcon icon={faSquareCheck} /></button>
+                                                <button className="btn btn-danger button-table"><FontAwesomeIcon icon={faTrash} /></button>
                                             </td>
                                         </tr>
                                 )
@@ -62,7 +63,7 @@ class AllTasksComponent extends Component {
                         </table>
                         <br></br>
                         <br></br>
-                        <h3 className="h3-table-name" id="completed">Completed </h3>
+                        <h3 className="table-name completed">Completed </h3>
                         <table className="table table-striped table-bordered">
                             <thead>
                             <tr>
@@ -86,8 +87,8 @@ class AllTasksComponent extends Component {
                                             <td className="table-body-date">{task.priority}</td>
                                             <td className="table-body-date">{task.tag}</td>
                                             <td className="text-center">
-                                                <button className="btn btn-secondary" id="button-table"><FontAwesomeIcon icon={faCircleXmark} /></button>
-                                                <button className="btn btn-danger" id="button-table"><FontAwesomeIcon icon={faTrash} /></button>
+                                                <button className="btn btn-secondary button-table"><FontAwesomeIcon icon={faCircleXmark} /></button>
+                                                <button className="btn btn-danger button-table"><FontAwesomeIcon icon={faTrash} /></button>
                                             </td>
                                         </tr>
                                 )

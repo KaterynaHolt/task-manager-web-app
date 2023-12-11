@@ -5,11 +5,11 @@ class HeaderComponent extends Component {
         return (
             <div>
                 <header>
-                    <nav className="navbar" id="header-navbar">
-                        <div><h1 className="h1-title">Task List</h1>
+                    <nav className="navbar header-navbar">
+                        <div><h1 className="title">Task List</h1>
                         </div>
                         <div className="mb-2">
-                            <button className="btn" id="add-button">Add Task</button>
+                            <button className="btn add-button">Add Task</button>
                         </div>
                     </nav>
                 </header>

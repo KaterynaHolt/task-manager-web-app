@@ -1,5 +1,5 @@
 package com.taskmanager.app.taskmanagerwebapp.controller;
-import com.taskmanager.app.taskmanagerwebapp.model.Task;
+import com.taskmanager.app.taskmanagerwebapp.model.Data;
 import com.taskmanager.app.taskmanagerwebapp.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,7 +17,7 @@ public class TaskController {
 
     //get all employees
     @GetMapping("/tasks")
-    public List<List<Task>> getAllTasks(){
+    public Data getAllTasks(){
         return taskService.getAllTasks();
     }
 
