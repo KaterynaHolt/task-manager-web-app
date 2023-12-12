@@ -1,5 +1,5 @@
 package com.taskmanager.app.taskmanagerwebapp.service;
-import com.taskmanager.app.taskmanagerwebapp.model.Data;
+import com.taskmanager.app.taskmanagerwebapp.model.Tasks;
 import com.taskmanager.app.taskmanagerwebapp.model.Task;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -20,7 +20,7 @@ public class TaskServiceTest {
     @Test
     public void test_getting_all_tasks(){
         //WHEN
-        Data data = taskService.getAllTasks();
+        Tasks data = taskService.getAllTasks();
         //THEN
         assertThat(data.getIncompleted()).extracting(Task::getStatus).doesNotContain("Completed");
         assertThat(data.getCompleted()).extracting(Task::getStatus).contains("Completed");

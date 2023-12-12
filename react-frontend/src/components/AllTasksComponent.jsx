@@ -8,15 +8,16 @@ class AllTasksComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            incompleted: [],
-            completed: [],
+            incompletedTasks: [],
+            completedTasks: [],
         }
     }
 
     componentDidMount() {
         TaskService.getTasks().then((res) => {
-            let data = res.data;
-            this.setState({incompleted: data.incompleted, completed: data.completed})
+            let tasks = res.data;
+            this.setState({ incompletedTasks: tasks.incompleted,
+                completedTasks: tasks.completed})
         });
     }
 
@@ -27,7 +28,7 @@ class AllTasksComponent extends Component {
                     <br></br>
                     <br></br>
                     <h3 className="table-name">On Hold </h3>
-                    <h6 className="incompleted-info">(You have {this.state.incompleted.length} tasks) </h6>
+                    <h6 className="incompleted-info">(You have {this.state.incompletedTasks.length} tasks) </h6>
                     <div className="row">
                         <table className="table table-striped table-bordered">
                             <thead>
@@ -42,7 +43,7 @@ class AllTasksComponent extends Component {
                             </thead>
                             <tbody>
                             {
-                                this.state.incompleted.map(
+                                this.state.incompletedTasks.map(
                                     task =>
                                         <tr key={task.id}>
                                             <td className="table-body-title">
@@ -77,7 +78,7 @@ class AllTasksComponent extends Component {
                             </thead>
                             <tbody>
                             {
-                                this.state.completed.map(
+                                this.state.completedTasks.map(
                                     task =>
                                         <tr key={task.id}>
                                             <td className="table-body-title">
