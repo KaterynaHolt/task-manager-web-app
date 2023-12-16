@@ -1,0 +1,54 @@
+@import "color.css";
+
+.table-name{
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.incompleted-info{
+    margin-left: 15px;
+    color: var(--color-warning-text);
+    display: inline-block;
+}
+
+.table-header-title{
+    font-size: 17px;
+    width: 275px;
+    text-align: center;
+}
+
+.table-header-date{
+    font-size: 17px;
+    width: 150px;
+    text-align: center;
+}
+
+.table-header-icon{
+    font-size: 17px;
+    width: 175px;
+    text-align: center;
+}
+
+.table-body-title{
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+.table-body-title-icon{
+    margin-right: 10px;
+    color: var(--color-table-icon);
+}
+
+.table-body-date{
+    vertical-align: middle;
+    font-size: 15px;
+    text-align: center;
+}
+
+.button-table{
+    margin-left: 10px;
+}
+
+.completed{
+    margin-top: 50px !important;
+}

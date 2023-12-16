@@ -1,27 +1,24 @@
 package com.taskmanager.app.taskmanagerwebapp.controller;
-
-import com.taskmanager.app.taskmanagerwebapp.model.Task;
-import com.taskmanager.app.taskmanagerwebapp.repository.TaskRepository;
+import com.taskmanager.app.taskmanagerwebapp.model.Tasks;
+import com.taskmanager.app.taskmanagerwebapp.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/taskmanager/")
 public class TaskController {
     @Autowired
-    private TaskRepository taskRepository;
+    private TaskService taskService;
 
     //get all employees
     @GetMapping("/tasks")
-    public List<Task> getAllTasks(){
-        return taskRepository.findAll();
+    public Tasks getAllTasks(){
+        return taskService.getAllTasks();
     }
 
     @GetMapping("/hello")

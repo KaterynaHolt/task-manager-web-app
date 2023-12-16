@@ -1,13 +1,16 @@
 import React, {Component, useState, useEffect} from 'react';
-import SimpleComponent from "./components/SimpleComponent";
+import AllTasksComponent from "./components/AllTasksComponent";
+import HeaderComponent from "./components/HeaderComponent";
 
 import './App.css';
-
+import './AllTasksPage.css';
+import './Header.css';
 
 function App() {
     return (
-        <div className="container">
-            <SimpleComponent/>
+        <div className="background">
+            <HeaderComponent />
+            <AllTasksComponent/>
         </div>
     )
 }

@@ -1,0 +1,14 @@
+:root {
+    --color-black: black;
+    --color-blue: blue;
+    --color-C7D7FD: #C7D7FD;
+    --color-A4BDFA: #A4BDFA;
+    --color-EAEFF8: #EAEFF8;
+    --color-e74c3c: #e74c3c;
+    --color-background-page: var(--color-C7D7FD);
+    --color-background-navbar: var(--color-A4BDFA);
+    --color-navbar-title: var(--color-EAEFF8);
+    --color-text: var(--color-black);
+    --color-warning-text: var(--color-e74c3c);
+    --color-table-icon: var(--color-blue);;
+}
