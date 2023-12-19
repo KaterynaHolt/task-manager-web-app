@@ -1,5 +1,6 @@
 package com.taskmanager.app.taskmanagerwebapp.service;
 
+import com.taskmanager.app.taskmanagerwebapp.model.Task;
 import com.taskmanager.app.taskmanagerwebapp.model.Tasks;
 import com.taskmanager.app.taskmanagerwebapp.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,5 +19,12 @@ public class TaskService {
         data.setIncompleted(taskRepository.getIncompletedTasks());
         data.setCompleted(taskRepository.getCompletedTasks());
         return data;
+    }
+
+    /**
+     * This method save new task to db
+     */
+    public Task createNewTask(Task task){
+        return taskRepository.save(task);
     }
 }
